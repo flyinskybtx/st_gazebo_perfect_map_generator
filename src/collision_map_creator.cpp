@@ -224,6 +224,9 @@ public:
 				map->info.origin.position.x, map->info.origin.position.y, yaw);
 
 		fclose(yaml);
+		std::string world_name;
+		world_name=filename_noext+".world";
+		world->Save(world_name);
 
 		ROS_INFO("Done\n");
 	}
